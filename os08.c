@@ -50,46 +50,47 @@ int main() {
 	else if (pid1 != 0 && pid2 == 0) { // process 2
 
 		sleep(2);
-		int childpid3 = fork();
-		int childpid4 = fork();
+		printf("process 2")
+		// int childpid3 = fork();
+		// int childpid4 = fork();
 
-		if (childpid3 < 0 || childpid4 < 0) {
-			printf("an error occurred while creating process\n");
-		}
+		// if (childpid3 < 0 || childpid4 < 0) {
+		// 	printf("an error occurred while creating process\n");
+		// }
 
-		else if (childpid3 == 0 && childpid4 != 0) { // process 2.1
-			// fp = fopen("name.txt", "w");
-			// if(fp == NULL) {
-			// 	printf("file can't be opened\n");
-			// 	exit(1);
-			// }
-			// fprintf(fp, "%s", 'Amin');
-			// fclose(fp);
-			printf("process 3");
-			exit(0);
-		}
-		else if (childpid3 != 0 && childpid4 == 0) { //process 2.2
-			sleep(1);
-			printf("process 4");
-			// fp = fopen("name.txt", "r");
-			// if(fp == NULL) {
-			// 	printf("file can't be opened\n");
-			// 	exit(1);
-			// }
-			// fgets(name, 50, fp);
-			// printf("%s", name);
-			// fclose(fp);
-			exit(0);
-		}
+		// else if (childpid3 == 0 && childpid4 != 0) { // process 2.1
+		// 	// fp = fopen("name.txt", "w");
+		// 	// if(fp == NULL) {
+		// 	// 	printf("file can't be opened\n");
+		// 	// 	exit(1);
+		// 	// }
+		// 	// fprintf(fp, "%s", 'Amin');
+		// 	// fclose(fp);
+		// 	printf("process 3");
+		// 	exit(0);
+		// }
+		// else if (childpid3 != 0 && childpid4 == 0) { //process 2.2
+		// 	sleep(1);
+		// 	printf("process 4");
+		// 	// fp = fopen("name.txt", "r");
+		// 	// if(fp == NULL) {
+		// 	// 	printf("file can't be opened\n");
+		// 	// 	exit(1);
+		// 	// }
+		// 	// fgets(name, 50, fp);
+		// 	// printf("%s", name);
+		// 	// fclose(fp);
+		// 	exit(0);
+		// }
 
-		else if (childpid3 > 0 && childpid4 > 0) { //process 2
-			waitpid(childpid4, &status, 0);
-			printf("parent of 3 and 4");
-			// sayHello = "Hello ";
-			// strcat(sayHello,name);
-			// printf("%s \n", sayHello);
-			exit(0);
-		}
+		// else if (childpid3 > 0 && childpid4 > 0) { //process 2
+		// 	waitpid(childpid4, &status, 0);
+		// 	printf("parent of 3 and 4");
+		// 	// sayHello = "Hello ";
+		// 	// strcat(sayHello,name);
+		// 	// printf("%s \n", sayHello);
+		// 	exit(0);
+		// }
 
 	}
 	else if (pid1 > 0 && pid2 > 0) { // parent of all
